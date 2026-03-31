@@ -1,10 +1,12 @@
 🚀 [**New Dataset Released !**](#-download-dataset)
 
-# EasyCarla-RL: A lightweight and beginner-friendly OpenAI Gym environment built on the CARLA simulator
+# An improved version of EasyCarla-RL, OpenAI Gym environment built on the CARLA simulator for model based RL.
 
 ## Overview
 
-EasyCarla-RL provides a lightweight and easy-to-use Gym-compatible interface for the CARLA simulator, specifically tailored for reinforcement learning (RL) applications. It integrates essential observation components such as LiDAR scans, ego vehicle states, nearby vehicle information, and waypoints. The environment supports safety-aware learning with reward and cost signals, visualization of waypoints, and customizable parameters including traffic settings, number of vehicles, and sensor range. EasyCarla-RL is designed to help both researchers and beginners efficiently train and evaluate RL agents without heavy engineering overhead.
+[It's not the final version, and the readme still needs to be updated.]
+
+EasyCarla-MBRL provides a lightweight and easy-to-use Gym-compatible interface for the CARLA simulator, specifically tailored for reinforcement learning (RL) applications. It integrates essential observation components such as LiDAR scans, ego vehicle states, nearby vehicle information, and waypoints(we add the vision message,such as BEV and camera front view). The environment supports safety-aware learning with reward and cost signals, visualization of waypoints, and customizable parameters including traffic settings, number of vehicles, and sensor range. EasyCarla-MBRL is designed to help both researchers and beginners efficiently train and evaluate RL agents without heavy engineering overhead.
 
 <div align="center">
 
@@ -23,8 +25,8 @@ EasyCarla-RL provides a lightweight and easy-to-use Gym-compatible interface for
 Clone the repository:
 
 ```bash
-git clone https://github.com/silverwingsbot/EasyCarla-RL.git
-cd EasyCarla-RL
+git clone https://github.com/nishijieXJ/EasyCarla-MBRL.git
+cd EasyCarla-MBRL
 ```
 
 Install the required dependencies:
@@ -73,20 +75,7 @@ This example demonstrates:
 - Loading a pre-trained RL agent
 - Interacting with EasyCarla-RL for evaluation
 - Evaluating the performance of a real RL model on a simulated autonomous driving task
-
-## 📥 Download Dataset
-
-This repository provides an offline dataset for training and evaluating RL agents in the EasyCarla-RL environment.
-
-This dataset includes over **7,000 trajectories** and **1.1 million timesteps**, collected from a mix of expert and random policies (with an **8:2 ratio** of expert to random), recorded in the Town03 map. The data is stored in **HDF5 format**.
-
-You can download it from either of the following sources:
-
-*  [Download from Hugging Face (direct link)](https://huggingface.co/datasets/silverwingsbot/easycarla/resolve/main/easycarla_offline_dataset.hdf5)
-*  [Download from 百度网盘 (提取码: 2049)](https://pan.baidu.com/s/1yhCFzl4RFHzxfszebYnOIg?pwd=2049)
-
-Filename: `easycarla_offline_dataset.hdf5` Size: \~2.76 GB Format: HDF5
-
+ 
 ### Dataset Structure (HDF5)
 
 Each sample in the dataset includes the following fields:
@@ -214,7 +203,7 @@ This project is licensed under the [Apache License 2.0](https://www.apache.org/l
 
 ## Author
 
-Created by [SilverWings](https://github.com/silverwingsbot)
+Created by [nishijieXJ](https://github.com/nishijieXJ)
 
 ## 💓 Acknowledgement
 
@@ -222,4 +211,5 @@ This project is made possible thanks to the following outstanding open-source co
 
 - [CARLA](https://github.com/carla-simulator/carla)
 - [gym-carla](https://github.com/cjy1992/gym-carla)
-- [Diffusion Q-Learning](https://github.com/Zhendong-Wang/Diffusion-Policies-for-Offline-RL)
+- [EasyCarla-RL](https://github.com/silverwingsbot)
+
