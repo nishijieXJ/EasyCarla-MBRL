@@ -6,7 +6,8 @@ GitHub: https://github.com/silverwingsbot
 Simple example: Run a trained Diffusion_QL model in easycarla
 """
 
-import gym
+#import gym
+import gymnasium as gym
 import easycarla
 import numpy as np
 import torch
