@@ -1,0 +1,49 @@
+# Reward/Cost sweep template for Drama + EasyCarla-RL + semi-trailer
+# Usage:
+# 1) Copy desired keys into params dict in carla_service.py
+# 2) Sweep with your experiment manager (hydra/wandb/manual scripts)
+
+# --- Minimal fix knobs ---
+collision_intensity_threshold: 50.0
+collision_soft_penalty: -10.0
+collision_hard_penalty: -100.0
+offroad_terminal_steps: 50
+timeout_terminal_bonus: 0.0
+
+# Explicit-goal success radius (if _goal_location is used)
+task_goal_tolerance_m: 1.0
+
+# --- Semi-trailer enhanced cost knobs ---
+cost_lane_deviation_weight: 1.0
+cost_proximity_weight: 1.0
+cost_articulation_weight: 0.8
+cost_jackknife_weight: 2.0
+cost_trailer_offroad_weight: 2.0
+cost_ttc_weight: 1.5
+
+# --- Ablation switches ---
+enable_cost_lane_deviation: true
+enable_cost_proximity: true
+enable_cost_articulation: true
+enable_cost_jackknife: true
+enable_cost_trailer_offroad: true
+enable_cost_ttc: true
+enable_reward_task_shaping: true
+
+# Articulation/jackknife geometry thresholds
+articulation_safe_angle_deg: 20.0
+jackknife_angle_deg: 55.0
+
+# TTC config
+ttc_threshold_s: 3.0
+ttc_max_consider_distance_m: 50.0
+
+# --- Suggested search ranges (comment only) ---
+# collision_intensity_threshold: [20, 40, 60, 80]
+# collision_hard_penalty: [-60, -100, -150]
+# offroad_terminal_steps: [20, 50, 80]
+# cost_articulation_weight: [0.2, 0.8, 1.5]
+# cost_jackknife_weight: [1.0, 2.0, 4.0]
+# cost_trailer_offroad_weight: [1.0, 2.0, 4.0]
+# ttc_threshold_s: [2.0, 3.0, 4.0]
+# cost_ttc_weight: [0.5, 1.5, 3.0]

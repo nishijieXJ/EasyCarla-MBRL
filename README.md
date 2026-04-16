@@ -1,4 +1,4 @@
-🚀 [**New Dataset Released !**](#-download-dataset)
+#🚀 [**New Dataset Released !**](#-download-dataset)
 
 # An improved version of EasyCarla-RL, OpenAI Gym environment built on the CARLA simulator for model based RL.
 

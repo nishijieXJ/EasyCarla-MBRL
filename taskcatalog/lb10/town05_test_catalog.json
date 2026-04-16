@@ -1,0 +1,7 @@
+{
+  "schema_version": "1.2",
+  "leaderboard_version": "1.0",
+  "catalog_mode": "fine",
+  "source": "/data2/zk/Tools/leaderboard1.0/scenario_runner/srunner/data/routes_devtest.xml",
+  "notes": "Auto-extracted from Leaderboard routes/scenarios. Cases sampled per task_type/difficulty."
+}
